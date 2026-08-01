@@ -1,0 +1,546 @@
+{
+  "rollup": {
+    "total_accounts": 8,
+    "band_counts": {
+      "red": 1,
+      "yellow": 5,
+      "green": 2
+    },
+    "avg_health_score": 78.1,
+    "exec_escalation_accounts": [
+      "Meridian Advisors",
+      "Cascade Investment Group",
+      "Stonegate Partners"
+    ]
+  },
+  "accounts": [
+    {
+      "account_id": "ACC-001",
+      "account_name": "Ironwood Financial",
+      "plan_tier": "Enterprise",
+      "primary_contact_name": "David Ruiz",
+      "structured": {
+        "account_id": "ACC-001",
+        "account_name": "Ironwood Financial",
+        "plan_tier": "Enterprise",
+        "primary_contact_name": "David Ruiz",
+        "usage_trend_pct": 10.4,
+        "open_tickets": 0,
+        "high_severity_open_tickets": 0,
+        "days_to_renewal": 287,
+        "invoice_overdue_days": 0,
+        "days_since_last_meeting": 10,
+        "contract_trend_pct": 5.0,
+        "champion_turnover_flag": false
+      },
+      "extracted_items": [
+        {
+          "source_type": "ticket",
+          "source_id": "T-1001",
+          "text": "Question about exporting a custom report to PDF. Resolved same day.",
+          "risk_tone": "neutral",
+          "theme": "none",
+          "risk_flag": false
+        },
+        {
+          "source_type": "note",
+          "source_id": "2026-07-22-note",
+          "text": "Team is happy with the reporting module. Asked about adding the risk-analytics add-on next quarter.",
+          "risk_tone": "positive",
+          "theme": "positive_expansion_signal",
+          "risk_flag": false
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 0.0,
+        "ticket_risk": 0.0,
+        "renewal_proximity": 0.0,
+        "payment_delinquency": 0.0,
+        "engagement_recency": 0.0,
+        "contract_trend": 0.0,
+        "champion_turnover": 0.0
+      },
+      "risk_score": 0.0,
+      "health_score": 100.0,
+      "band": "green",
+      "top_drivers": [
+        [
+          "usage_trend",
+          0.0
+        ],
+        [
+          "ticket_risk",
+          0.0
+        ],
+        [
+          "renewal_proximity",
+          0.0
+        ]
+      ],
+      "narrative": "The computed risk score of 0.0/100 (green band) indicates an extremely healthy account, and the additional evidence strongly reinforces this assessment rather than contradicting it.\n\nThe qualitative signals are entirely positive:\n1. The ticket evidence shows efficient, frictionless support engagement - a straightforward question about report exporting that was resolved same day with neutral tone, indicating no frustration or systemic issues.\n2. The CSM note reveals a clear positive expansion signal: the team is explicitly satisfied with current functionality (reporting module) and has proactively expressed interest in purchasing an additional add-on (risk-analytics) next quarter.\n\nThere are no contradictory signals present. The zero-point contributions from usage_trend, ticket_risk, and renewal_proximity align perfectly with the evidence of satisfied users who are engaged enough to explore expansion. The expansion inquiry is a particularly strong health indicator that goes beyond mere retention - it suggests the customer is deriving value and sees potential for deeper product adoption.\n\nNo concerning patterns, hidden risks, or contextual explanations are needed here. This is a straightforward case of a healthy account performing well across both quantitative metrics and qualitative signals. The account appears to be on a positive trajectory with natural expansion opportunity.",
+      "action_recommendation": "NO_ACTION"
+    },
+    {
+      "account_id": "ACC-002",
+      "account_name": "Meridian Advisors",
+      "plan_tier": "Enterprise",
+      "primary_contact_name": "Karen Ellis",
+      "structured": {
+        "account_id": "ACC-002",
+        "account_name": "Meridian Advisors",
+        "plan_tier": "Enterprise",
+        "primary_contact_name": "Karen Ellis",
+        "usage_trend_pct": -43.8,
+        "open_tickets": 3,
+        "high_severity_open_tickets": 2,
+        "days_to_renewal": 40,
+        "invoice_overdue_days": 0,
+        "days_since_last_meeting": 50,
+        "contract_trend_pct": 0.0,
+        "champion_turnover_flag": false
+      },
+      "extracted_items": [
+        {
+          "source_type": "ticket",
+          "source_id": "T-2001",
+          "text": "Users unable to log in via SSO since Tuesday. Blocking daily reporting workflow. No update in 4 days.",
+          "risk_tone": "negative",
+          "theme": "blocking_issue",
+          "risk_flag": true
+        },
+        {
+          "source_type": "ticket",
+          "source_id": "T-2002",
+          "text": "Second team also reporting SSO login failures. Escalating internally, growing frustrated.",
+          "risk_tone": "negative",
+          "theme": "blocking_issue",
+          "risk_flag": true
+        },
+        {
+          "source_type": "ticket",
+          "source_id": "T-2003",
+          "text": "Dashboard load times much slower than usual this week.",
+          "risk_tone": "negative",
+          "theme": "blocking_issue",
+          "risk_flag": true
+        },
+        {
+          "source_type": "note",
+          "source_id": "2026-06-12-note",
+          "text": "Standard check-in, no concerns raised at the time.",
+          "risk_tone": "neutral",
+          "theme": "none",
+          "risk_flag": false
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 87.6,
+        "ticket_risk": 76,
+        "renewal_proximity": 77.77777777777779,
+        "payment_delinquency": 0.0,
+        "engagement_recency": 30.0,
+        "contract_trend": 0.0,
+        "champion_turnover": 0.0
+      },
+      "risk_score": 47.4,
+      "health_score": 52.6,
+      "band": "red",
+      "top_drivers": [
+        [
+          "usage_trend",
+          17.52
+        ],
+        [
+          "ticket_risk",
+          15.200000000000001
+        ],
+        [
+          "renewal_proximity",
+          11.666666666666668
+        ]
+      ],
+      "narrative": "The computed risk score of 47.4/100 (red band) is strongly corroborated by the available evidence and warrants immediate escalation. Here's the full picture:\n\n**Risk Score Alignment**: The top drivers\u2014usage trend decline (17.5 pts), ticket risk (15.2 pts), and renewal proximity (11.7 pts)\u2014paint a troubling picture that is directly validated by the ticket evidence.\n\n**Critical Evidence Analysis**:\n1. **Blocking SSO Issue (Multi-team Impact)**: Two separate tickets describe a persistent SSO login failure affecting multiple teams since Tuesday, with no resolution after 4 days. This is a blocking issue preventing users from accessing the platform entirely for daily workflows. The fact that a second team has also reported the same problem indicates widespread impact across the organization.\n\n2. **Customer Frustration Trajectory**: The progression from initial report to \"growing frustrated\" with internal escalation shows deteriorating sentiment and indicates the customer is losing confidence in our ability to resolve critical issues.\n\n3. **Compounding Performance Issues**: A third ticket about degraded dashboard performance suggests systemic problems beyond just SSO, further eroding user experience.\n\n4. **No Protective Context**: The neutral CSM note provides no mitigating context\u2014it's a standard check-in that predates these critical issues and offers no insight into the current crisis.\n\n**Why This Warrants Executive Escalation**:\n- The combination of a blocking authentication issue (preventing platform access), multi-team impact, 4+ days without resolution, and proximity to renewal creates severe churn risk\n- The customer is already escalating internally, suggesting executive-level visibility on their side\n- Usage trend decline (the top score driver) is likely directly attributable to users being unable to log in\n- No evidence of recovery, mitigation, or positive sentiment to offset these risks\n\nThis is not a case of metrics misrepresenting reality\u2014the quantitative risk score understates the urgency of multiple unresolved blocking issues near renewal.",
+      "action_recommendation": "EXEC_ESCALATION"
+    },
+    {
+      "account_id": "ACC-003",
+      "account_name": "Beacon Hill Partners",
+      "plan_tier": "Growth",
+      "primary_contact_name": "Sarah Kim",
+      "structured": {
+        "account_id": "ACC-003",
+        "account_name": "Beacon Hill Partners",
+        "plan_tier": "Growth",
+        "primary_contact_name": "Sarah Kim",
+        "usage_trend_pct": -5.5,
+        "open_tickets": 1,
+        "high_severity_open_tickets": 0,
+        "days_to_renewal": 149,
+        "invoice_overdue_days": 0,
+        "days_since_last_meeting": 8,
+        "contract_trend_pct": 0.0,
+        "champion_turnover_flag": true
+      },
+      "extracted_items": [
+        {
+          "source_type": "ticket",
+          "source_id": "T-3001",
+          "text": "New admin asking how to pull the quarterly allocation report \u2014 previous admin used to run this manually.",
+          "risk_tone": "neutral",
+          "theme": "champion_unfamiliar",
+          "risk_flag": true
+        },
+        {
+          "source_type": "note",
+          "source_id": "2026-07-24-note",
+          "text": "New admin Sarah Kim is still ramping up. Asked several basic navigation questions and seems unfamiliar with the reporting workflows the prior contact had set up.",
+          "risk_tone": "negative",
+          "theme": "champion_unfamiliar",
+          "risk_flag": true
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 11.0,
+        "ticket_risk": 12,
+        "renewal_proximity": 17.22222222222223,
+        "payment_delinquency": 0.0,
+        "engagement_recency": 0.0,
+        "contract_trend": 0.0,
+        "champion_turnover": 100.0
+      },
+      "risk_score": 17.2,
+      "health_score": 82.8,
+      "band": "yellow",
+      "top_drivers": [
+        [
+          "champion_turnover",
+          10.0
+        ],
+        [
+          "renewal_proximity",
+          2.5833333333333344
+        ],
+        [
+          "ticket_risk",
+          2.4000000000000004
+        ]
+      ],
+      "narrative": "Beacon Hill Partners presents a moderate but actionable risk profile that warrants proactive CSM engagement. The 17.2/100 risk score is driven primarily by champion turnover (10.0 pts), which the qualitative evidence strongly corroborates and amplifies.\n\nThe evidence paints a concerning picture of knowledge transfer gaps: the new admin Sarah Kim is struggling with basic navigation and reporting workflows that were previously handled by the former champion. The ticket shows she doesn't know how to execute routine tasks like pulling quarterly allocation reports, and the CSM note indicates this is part of a broader pattern of unfamiliarity with established processes.\n\nThis situation represents a critical vulnerability window. Champion turnover is already the dominant risk factor, and the additional evidence confirms that the new admin is not yet equipped to derive value from the platform independently. While the ticket tone is neutral (just asking for help), the CSM's observation that Sarah \"seems unfamiliar\" with workflows signals that onboarding and enablement are incomplete.\n\nThe renewal proximity score (2.6 pts) adds urgency\u2014we're close enough to renewal that leaving this knowledge gap unaddressed could allow frustration to build or usage to decline. However, this is still a recoverable situation. Sarah is actively seeking help rather than disengaging, which is positive. The risk is moderate rather than severe, but the convergence of champion turnover, knowledge gaps, and approaching renewal creates a clear need for proactive intervention.\n\nA CSM check-in is warranted to: (1) assess Sarah's confidence and remaining onboarding needs, (2) offer structured training on key workflows, and (3) ensure she feels supported before any frustration calcifies into dissatisfaction.",
+      "action_recommendation": "CSM_CHECK_IN"
+    },
+    {
+      "account_id": "ACC-004",
+      "account_name": "Windward Asset Management",
+      "plan_tier": "Enterprise",
+      "primary_contact_name": "Tom Bradley",
+      "structured": {
+        "account_id": "ACC-004",
+        "account_name": "Windward Asset Management",
+        "plan_tier": "Enterprise",
+        "primary_contact_name": "Tom Bradley",
+        "usage_trend_pct": -0.6,
+        "open_tickets": 0,
+        "high_severity_open_tickets": 0,
+        "days_to_renewal": 184,
+        "invoice_overdue_days": 50,
+        "days_since_last_meeting": 24,
+        "contract_trend_pct": 0.0,
+        "champion_turnover_flag": false
+      },
+      "extracted_items": [
+        {
+          "source_type": "note",
+          "source_id": "2026-07-08-note",
+          "text": "Discussed renewal terms, no product concerns raised. They mentioned invoice processing delays on their end due to an internal AP backlog, expect it resolved this month.",
+          "risk_tone": "positive",
+          "theme": "none",
+          "risk_flag": false
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 1.2,
+        "ticket_risk": 0.0,
+        "renewal_proximity": 0.0,
+        "payment_delinquency": 100.0,
+        "engagement_recency": 0.0,
+        "contract_trend": 0.0,
+        "champion_turnover": 0.0
+      },
+      "risk_score": 15.2,
+      "health_score": 84.8,
+      "band": "yellow",
+      "top_drivers": [
+        [
+          "payment_delinquency",
+          15.0
+        ],
+        [
+          "usage_trend",
+          0.24
+        ],
+        [
+          "ticket_risk",
+          0.0
+        ]
+      ],
+      "narrative": "The computed risk score of 15.2/100 is driven almost entirely by payment delinquency (15.0 pts), with minimal contribution from usage trends or support tickets. However, the qualitative evidence from CSM notes directly contradicts the implied severity of this metric.\n\nThe CSM note indicates a recent discussion about renewal terms where no product concerns were raised\u2014a positive signal suggesting the customer remains engaged and interested in continuing the relationship. Critically, the payment delinquency appears to be fully explained: the customer proactively disclosed an internal AP backlog causing invoice processing delays, with an expected resolution timeline of this month. The tone of the conversation was positive, suggesting transparency and good communication between the account team and client.\n\nThis context transforms what appears to be a payment risk signal into a temporary operational delay on the customer's side, not an indicator of dissatisfaction, financial distress, or churn risk. The customer's willingness to discuss renewal terms simultaneously with explaining payment delays suggests they view the relationship as ongoing and stable.\n\nGiven that the risk driver is explained, temporary, and accompanied by positive engagement signals, the quantitative score overstates the actual risk. This situation does not warrant executive escalation. A CSM check-in would be appropriate to confirm the payment issue resolves as expected this month and to maintain the positive momentum around renewal discussions.",
+      "action_recommendation": "CSM_CHECK_IN"
+    },
+    {
+      "account_id": "ACC-005",
+      "account_name": "Cascade Investment Group",
+      "plan_tier": "Growth",
+      "primary_contact_name": "Linda Park",
+      "structured": {
+        "account_id": "ACC-005",
+        "account_name": "Cascade Investment Group",
+        "plan_tier": "Growth",
+        "primary_contact_name": "Linda Park",
+        "usage_trend_pct": -14.1,
+        "open_tickets": 1,
+        "high_severity_open_tickets": 0,
+        "days_to_renewal": 96,
+        "invoice_overdue_days": 0,
+        "days_since_last_meeting": 73,
+        "contract_trend_pct": -15.0,
+        "champion_turnover_flag": false
+      },
+      "extracted_items": [
+        {
+          "source_type": "ticket",
+          "source_id": "T-5001",
+          "text": "Minor formatting issue in exported CSV, low priority.",
+          "risk_tone": "neutral",
+          "theme": "none",
+          "risk_flag": false
+        },
+        {
+          "source_type": "note",
+          "source_id": "2026-05-20-note",
+          "text": "Have not been able to connect with Linda in over two months despite three outreach attempts.",
+          "risk_tone": "negative",
+          "theme": "champion_unfamiliar",
+          "risk_flag": true
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 28.2,
+        "ticket_risk": 12,
+        "renewal_proximity": 46.666666666666664,
+        "payment_delinquency": 0.0,
+        "engagement_recency": 64.5,
+        "contract_trend": 45.0,
+        "champion_turnover": 40.0
+      },
+      "risk_score": 30.0,
+      "health_score": 70.0,
+      "band": "yellow",
+      "top_drivers": [
+        [
+          "renewal_proximity",
+          6.999999999999999
+        ],
+        [
+          "engagement_recency",
+          6.45
+        ],
+        [
+          "usage_trend",
+          5.640000000000001
+        ]
+      ],
+      "narrative": "The computed risk score of 30/100 (yellow band) reflects moderate concern driven primarily by renewal proximity, engagement recency, and usage trends. However, the qualitative evidence reveals a more concerning picture that the score may underweight.\n\nThe CSM note is a red flag: inability to connect with Linda (presumably the champion or key stakeholder) over two months despite three attempts indicates potential disengagement at a critical relationship level. This is particularly worrying given that \"champion_unfamiliar\" is flagged and engagement_recency is already a top score driver. The lack of champion access can signal organizational changes, shifting priorities, or early signs of churn risk that may not yet be fully reflected in usage metrics.\n\nWhile the ticket evidence is benign (a minor formatting issue with neutral tone), it doesn't offset the relationship gap. The combination of renewal proximity as the top risk driver alongside champion inaccessibility creates urgency\u2014we're heading toward a renewal without solid executive or champion engagement.\n\nThe score appropriately identifies this as a yellow-band account requiring attention, but the qualitative evidence suggests this warrants proactive intervention beyond standard monitoring. The CSM has already attempted outreach three times without success, indicating they may need executive support or a different engagement strategy to re-establish contact before renewal discussions begin in earnest.",
+      "action_recommendation": "EXEC_ESCALATION"
+    },
+    {
+      "account_id": "ACC-006",
+      "account_name": "Highline Capital",
+      "plan_tier": "Enterprise",
+      "primary_contact_name": "James Okafor",
+      "structured": {
+        "account_id": "ACC-006",
+        "account_name": "Highline Capital",
+        "plan_tier": "Enterprise",
+        "primary_contact_name": "James Okafor",
+        "usage_trend_pct": -24.2,
+        "open_tickets": 0,
+        "high_severity_open_tickets": 0,
+        "days_to_renewal": 260,
+        "invoice_overdue_days": 0,
+        "days_since_last_meeting": 12,
+        "contract_trend_pct": 20.0,
+        "champion_turnover_flag": false
+      },
+      "extracted_items": [
+        {
+          "source_type": "note",
+          "source_id": "2026-07-20-note",
+          "text": "Client is evaluating rolling the platform out to two additional teams next quarter. The recent usage dip is attributed to a temporary staffing gap on their analytics team, expected to resolve by next month. No concerns raised.",
+          "risk_tone": "positive",
+          "theme": "positive_expansion_signal",
+          "risk_flag": false
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 48.4,
+        "ticket_risk": 0.0,
+        "renewal_proximity": 0.0,
+        "payment_delinquency": 0.0,
+        "engagement_recency": 0.0,
+        "contract_trend": 0.0,
+        "champion_turnover": 0.0
+      },
+      "risk_score": 9.7,
+      "health_score": 90.3,
+      "band": "green",
+      "top_drivers": [
+        [
+          "usage_trend",
+          9.68
+        ],
+        [
+          "ticket_risk",
+          0.0
+        ],
+        [
+          "renewal_proximity",
+          0.0
+        ]
+      ],
+      "narrative": "The computed risk score of 9.7/100 (green band) indicates very low risk, with the primary driver being usage_trend contributing all 9.7 points. However, the qualitative evidence provides important context that contradicts any alarm this metric might otherwise raise.\n\nThe CSM note reveals a clearly positive account trajectory: the client is actively evaluating platform expansion to two additional teams next quarter, which is a strong expansion signal. Critically, the usage dip that likely drove the usage_trend score component is explicitly explained as temporary and attributable to a known staffing gap on their analytics team, with resolution expected imminently.\n\nThis is a textbook case where the quantitative signal (usage decline) is fully contextualized by the qualitative evidence. The usage dip is:\n1. Temporary and explained (staffing gap)\n2. Already understood and tracked\n3. Expected to resolve naturally\n4. Occurring alongside strong positive expansion signals\n\nRather than indicating account risk, the full picture suggests a healthy account with growth potential. The usage trend metric captured a real but transient operational challenge, not a product fit or satisfaction issue. The expansion discussion demonstrates continued confidence in the platform.\n\nNo action is warranted beyond normal CSM cadence already in place.",
+      "action_recommendation": "NO_ACTION"
+    },
+    {
+      "account_id": "ACC-007",
+      "account_name": "Stonegate Partners",
+      "plan_tier": "Enterprise",
+      "primary_contact_name": "Priya Nair",
+      "structured": {
+        "account_id": "ACC-007",
+        "account_name": "Stonegate Partners",
+        "plan_tier": "Enterprise",
+        "primary_contact_name": "Priya Nair",
+        "usage_trend_pct": -27.0,
+        "open_tickets": 2,
+        "high_severity_open_tickets": 1,
+        "days_to_renewal": 58,
+        "invoice_overdue_days": 0,
+        "days_since_last_meeting": 60,
+        "contract_trend_pct": 0.0,
+        "champion_turnover_flag": true
+      },
+      "extracted_items": [
+        {
+          "source_type": "ticket",
+          "source_id": "T-7001",
+          "text": "Reporting engine crashing on large portfolios, unresolved for over two weeks. Team is frustrated and has started evaluating alternative platforms, including a named competitor, due to slow issue resolution.",
+          "risk_tone": "negative",
+          "theme": "competitor_mention",
+          "risk_flag": true
+        },
+        {
+          "source_type": "ticket",
+          "source_id": "T-7002",
+          "text": "Follow-up requesting status update, no response yet from support.",
+          "risk_tone": "negative",
+          "theme": "blocking_issue",
+          "risk_flag": true
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 54.0,
+        "ticket_risk": 44,
+        "renewal_proximity": 67.77777777777779,
+        "payment_delinquency": 0.0,
+        "engagement_recency": 45.0,
+        "contract_trend": 0.0,
+        "champion_turnover": 60.0
+      },
+      "risk_score": 40.3,
+      "health_score": 59.7,
+      "band": "yellow",
+      "top_drivers": [
+        [
+          "usage_trend",
+          10.8
+        ],
+        [
+          "renewal_proximity",
+          10.166666666666668
+        ],
+        [
+          "ticket_risk",
+          8.8
+        ]
+      ],
+      "narrative": "The 40.3/100 risk score for Stonegate Partners falls in the yellow band, indicating moderate concern. However, the qualitative evidence significantly amplifies this risk and reveals a more urgent situation than the numerical score alone suggests.\n\n**Key concerns that reinforce and exceed the computed score:**\n\n1. **Active competitor evaluation**: The ticket explicitly mentions the team is evaluating alternative platforms and has named a specific competitor. This is a critical red flag indicating flight risk that may not be fully captured in the quantitative metrics.\n\n2. **Unresolved blocking issue (2+ weeks)**: A crashing reporting engine on large portfolios represents a fundamental product failure for their use case. The two-week duration without resolution suggests either technical complexity or support process breakdown.\n\n3. **Deteriorating support experience**: The follow-up ticket noting no response from support compounds the technical issue with a service delivery failure, creating a compounding negative experience.\n\n4. **Team-wide frustration**: The language indicates organizational-level frustration, not just individual user dissatisfaction, suggesting broader adoption/renewal risk.\n\n**Score driver alignment:**\n- The 10.8-point usage_trend contribution likely reflects declining engagement as users abandon a broken feature\n- The 8.8-point ticket_risk validates the severity of open support issues\n- 10.2-point renewal_proximity means this crisis is occurring at a particularly vulnerable time\n\n**Conclusion**: While the 40.3 score indicates moderate risk, the qualitative evidence reveals an active churn scenario in progress. The combination of a critical unresolved technical issue, competitor evaluation, support responsiveness failure, and proximity to renewal creates an escalation-worthy situation. This account needs immediate senior attention to prevent loss.",
+      "action_recommendation": "EXEC_ESCALATION"
+    },
+    {
+      "account_id": "ACC-008",
+      "account_name": "Fairview Wealth Partners",
+      "plan_tier": "Growth",
+      "primary_contact_name": "Mark Alston",
+      "structured": {
+        "account_id": "ACC-008",
+        "account_name": "Fairview Wealth Partners",
+        "plan_tier": "Growth",
+        "primary_contact_name": "Mark Alston",
+        "usage_trend_pct": -8.8,
+        "open_tickets": 1,
+        "high_severity_open_tickets": 0,
+        "days_to_renewal": 121,
+        "invoice_overdue_days": 10,
+        "days_since_last_meeting": 35,
+        "contract_trend_pct": 0.0,
+        "champion_turnover_flag": false
+      },
+      "extracted_items": [
+        {
+          "source_type": "ticket",
+          "source_id": "T-8001",
+          "text": "Requesting clarification on how allocation drift is calculated in the monthly report.",
+          "risk_tone": "neutral",
+          "theme": "none",
+          "risk_flag": false
+        },
+        {
+          "source_type": "note",
+          "source_id": "2026-06-27-note",
+          "text": "Routine check-in. Generally positive, no major issues flagged.",
+          "risk_tone": "positive",
+          "theme": "none",
+          "risk_flag": false
+        }
+      ],
+      "component_scores": {
+        "usage_trend": 17.6,
+        "ticket_risk": 12,
+        "renewal_proximity": 32.77777777777777,
+        "payment_delinquency": 25.0,
+        "engagement_recency": 7.5,
+        "contract_trend": 0.0,
+        "champion_turnover": 0.0
+      },
+      "risk_score": 15.3,
+      "health_score": 84.7,
+      "band": "yellow",
+      "top_drivers": [
+        [
+          "renewal_proximity",
+          4.916666666666665
+        ],
+        [
+          "payment_delinquency",
+          3.75
+        ],
+        [
+          "usage_trend",
+          3.5200000000000005
+        ]
+      ],
+      "narrative": "Fairview Wealth Partners presents a nuanced risk profile that warrants monitoring but does not yet require escalation. The computed risk score of 15.3/100 places them in the yellow band, driven by three factors: renewal proximity (4.9 pts), payment delinquency (3.8 pts), and negative usage trends (3.5 pts).\n\nHowever, the qualitative evidence from tickets and CSM notes does not strongly corroborate heightened risk:\n\n1. **Tone and Engagement**: The recent ticket shows neutral, professional engagement around a technical clarification (allocation drift calculation), indicating the client is actively using the product and seeking to understand its features better - a sign of operational involvement rather than disengagement.\n\n2. **CSM Sentiment**: The most recent check-in note describes the relationship as \"generally positive\" with \"no major issues flagged,\" which contradicts a narrative of deteriorating health.\n\n3. **Context for Score Drivers**: \n   - *Renewal proximity* is a temporal factor that naturally increases risk as contracts near expiration, but doesn't indicate dissatisfaction by itself\n   - *Payment delinquency* (3.8 pts) is concerning and deserves attention, but there's no evidence in the notes of financial distress or complaints about billing\n   - *Usage trend* decline (3.5 pts) is noteworthy, but the lack of negative feedback or escalations suggests this may be seasonal or operational rather than indicative of abandonment\n\nThe evidence suggests this is a moderately at-risk account that would benefit from proactive CSM engagement to understand the payment delay and usage dip, but there's no clear indication of imminent churn or executive-level crisis requiring immediate escalation.",
+      "action_recommendation": "CSM_CHECK_IN"
+    }
+  ]
+}

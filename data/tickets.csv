@@ -1,0 +1,10 @@
+ticket_id,account_id,opened_date,status,severity,body_text
+T-1001,ACC-001,2026-06-10,closed,low,Question about exporting a custom report to PDF. Resolved same day.
+T-2001,ACC-002,2026-07-05,open,high,Users unable to log in via SSO since Tuesday. Blocking daily reporting workflow. No update in 4 days.
+T-2002,ACC-002,2026-07-18,open,high,"Second team also reporting SSO login failures. Escalating internally, growing frustrated."
+T-2003,ACC-002,2026-07-20,open,medium,Dashboard load times much slower than usual this week.
+T-3001,ACC-003,2026-07-15,open,medium,New admin asking how to pull the quarterly allocation report — previous admin used to run this manually.
+T-5001,ACC-005,2026-07-01,open,low,"Minor formatting issue in exported CSV, low priority."
+T-7001,ACC-007,2026-06-30,open,high,"Reporting engine crashing on large portfolios, unresolved for over two weeks. Team is frustrated and has started evaluating alternative platforms, including a named competitor, due to slow issue resolution."
+T-7002,ACC-007,2026-07-15,open,medium,"Follow-up requesting status update, no response yet from support."
+T-8001,ACC-008,2026-07-12,open,medium,Requesting clarification on how allocation drift is calculated in the monthly report.

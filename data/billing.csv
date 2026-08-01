@@ -1,0 +1,9 @@
+account_id,invoice_overdue_days,contract_trend_pct
+ACC-001,0,5.0
+ACC-002,0,0.0
+ACC-003,0,0.0
+ACC-004,50,0.0
+ACC-005,0,-15.0
+ACC-006,0,20.0
+ACC-007,0,0.0
+ACC-008,10,0.0
