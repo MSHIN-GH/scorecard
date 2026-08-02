@@ -56,8 +56,6 @@ Measured on the full 8-account synthetic dataset (16 LLM calls: 8 batched extrac
 
 This is down from an earlier version of this pipeline (one call per document, everything on Sonnet) that cost ~$0.016/account and took ~26s for the same 8 accounts — batching extraction per-account plus moving it to Haiku cut cost by ~35% and wall time by ~45%, with no measurable quality loss (spot-checked against the same proof-point accounts below).
 
-Cost scales linearly with account count; wall time scales with account count divided by concurrency. Solovis's actual client-account count wasn't directly available — the round-1 case study estimated it from public headcount data as ~20 CSMs × a 20–25 account book each, i.e. **~400–500 accounts**, not the ~150–160 figure that was Solovis's total *employee* headcount. Extrapolating from the measured throughput above at the same concurrency cap: a full run at that scale would take roughly **12–16 minutes for ~$4–5** — well within a nightly batch window, with the concurrency cap raisable in production, bounded by whatever Anthropic rate-limit tier applies.
-
 ## Project structure
 
 ```
