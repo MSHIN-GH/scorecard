@@ -53,7 +53,18 @@ def synthesize(account_name: str, risk_score: float, band: str, top_drivers: lis
         "A concerning metric explained by context in the notes (e.g., a temporary, "
         "explained dip alongside clearly positive signals) may not. "
         "Do not just restate the number — reason about whether the full picture supports it. "
-        "You are not deciding the final numeric score, only the recommended next action."
+        "You are not deciding the final numeric score, only the recommended next action.\n\n"
+        "Choose action_recommendation using these criteria — this is a risk-response "
+        "decision, not a general 'is there anything worth mentioning' decision:\n"
+        "- NO_ACTION: no signal, in the score or in the notes, suggests this account needs "
+        "attention beyond normal cadence. A positive or neutral mention — including "
+        "expansion interest, satisfaction, or a routine question — is NOT itself a reason "
+        "to recommend a check-in. Healthy accounts with good news still get NO_ACTION.\n"
+        "- CSM_CHECK_IN: there is a real but non-urgent risk signal (a drifting metric, a "
+        "relationship gap, an ambiguous or unresolved concern) that a CSM should proactively "
+        "look into before it becomes serious.\n"
+        "- EXEC_ESCALATION: there is a clear, corroborated risk of churn or downsell that "
+        "needs executive-level attention now."
     )
 
     def do_call():
