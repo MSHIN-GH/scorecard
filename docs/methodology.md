@@ -28,7 +28,7 @@ Weights sum to 1.0. Each component is scored 0–100 independently via a documen
 
 ## Where the LLM contributes
 
-- **Extraction** (per note/ticket, independent, narrow-scope): classifies risk tone, theme (e.g., competitor mention, champion unfamiliarity), producing structured flags that feed the champion-turnover and ticket-risk components above.
+- **Extraction** (per account, one batched call covering all of that account's notes/tickets, narrow-scope, on Haiku): classifies risk tone and theme (e.g., competitor mention, champion unfamiliarity) per item, producing structured flags that feed the champion-turnover and ticket-risk components above. Batched for cost/latency, but each item is still classified on its own content — items don't influence each other's classification within the batch.
 - **Reasoning/synthesis** (per account, after the score is computed): reviews the account's full computed evidence together and produces a qualitative escalation judgment (`NO_ACTION` / `CSM_CHECK_IN` / `EXEC_ESCALATION`) + narrative. This sits alongside the score — it does not change the number.
 
 ## Known limitation

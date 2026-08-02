@@ -10,7 +10,7 @@ from enum import Enum
 
 from pydantic import BaseModel, Field
 
-from .llm_client import get_client, timed_call, MODEL
+from .llm_client import get_client, timed_call, SYNTHESIS_MODEL
 
 
 class ActionRecommendation(str, Enum):
@@ -58,7 +58,7 @@ def synthesize(account_name: str, risk_score: float, band: str, top_drivers: lis
 
     def do_call():
         return client.messages.create(
-            model=MODEL,
+            model=SYNTHESIS_MODEL,
             max_tokens=512,
             tools=[_TOOL_SCHEMA],
             tool_choice={"type": "tool", "name": "synthesize_account_risk"},

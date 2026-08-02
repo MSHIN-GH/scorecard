@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Single entry point: run the full pipeline and render the static HTML report.
+"""Single entry point: run the full pipeline and write the results snapshot
+that app.py (the Streamlit viewer) reads.
 
 Usage:
     python run.py
@@ -21,9 +22,20 @@ OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "report.html")
 RESULTS_JSON_PATH = os.path.join(OUTPUT_DIR, "results.json")
 
-# Approximate Claude Sonnet 4.5 pricing, USD per million tokens.
-PRICE_PER_M_INPUT = 3.0
-PRICE_PER_M_OUTPUT = 15.0
+# USD per million tokens, by model family. Priced per-call from the actual
+# model that served each request (response.model), not a single flat rate —
+# extraction runs on Haiku, synthesis on Sonnet, and they price differently.
+PRICING_PER_M = {
+    "haiku": (1.0, 5.0),
+    "sonnet": (3.0, 15.0),
+}
+
+
+def _price_for_model(model: str) -> tuple[float, float]:
+    for key, prices in PRICING_PER_M.items():
+        if key in model:
+            return prices
+    return PRICING_PER_M["sonnet"]  # conservative fallback
 
 
 def _load_dotenv():
@@ -54,9 +66,11 @@ def main():
     save_results(results, rollup, RESULTS_JSON_PATH)
 
     log = call_log()
-    total_in = sum(c["input_tokens"] for c in log)
-    total_out = sum(c["output_tokens"] for c in log)
-    cost = (total_in / 1_000_000 * PRICE_PER_M_INPUT) + (total_out / 1_000_000 * PRICE_PER_M_OUTPUT)
+    cost = 0.0
+    for c in log:
+        price_in, price_out = _price_for_model(c["model"])
+        cost += c["input_tokens"] / 1_000_000 * price_in
+        cost += c["output_tokens"] / 1_000_000 * price_out
 
     print(f"Scored {len(results)} accounts in {elapsed:.1f}s ({len(log)} LLM calls).")
     print(f"Est. cost: ${cost:.4f} (${cost / len(results):.4f} / account)")
