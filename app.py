@@ -189,7 +189,12 @@ def action_badge(action: str) -> str:
 
 
 @st.cache_data
-def load_snapshot(path: str) -> dict:
+def load_snapshot(path: str, mtime: float) -> dict:
+    """mtime busts the cache whenever the file actually changes — cache_data
+    keyed on path alone would keep serving a stale snapshot after a deploy
+    that updates the file without a full app restart. (Streamlit excludes
+    underscore-prefixed args from the cache key, so this must NOT be
+    underscore-prefixed — it needs to participate in the key.)"""
     with open(path) as f:
         return json.load(f)
 
@@ -203,7 +208,7 @@ if not os.path.exists(RESULTS_PATH):
     )
     st.stop()
 
-data = load_snapshot(RESULTS_PATH)
+data = load_snapshot(RESULTS_PATH, os.path.getmtime(RESULTS_PATH))
 rollup = data["rollup"]
 accounts = data["accounts"]
 
